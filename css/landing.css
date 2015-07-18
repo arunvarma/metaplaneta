@@ -1,0 +1,231 @@
+/*
+ * landing.css
+ * Author: Arun Varma
+ * Date: July 3, 2015
+ */
+
+@font-face {
+  font-family: "avenir";
+  src: url(../font/avenir.ttf);
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: avenir;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-family: avenir;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+p {
+  font-family: avenir;
+  font-weight: normal;
+}
+
+a {
+  font-family: avenir;
+  font-weight: normal;
+}
+
+.page_hider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.scroll_down_wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.scroll_down_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(130, 130, 130, 0.6);
+}
+
+.scroll_down_link {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.person_profile {
+  width: 33.33%;
+  height: 100%;
+  background-size: cover;
+  float: left;
+}
+
+.person_description {
+  position: absolute;
+  bottom: 0;
+  width: 33.33%;
+  height: 90px;
+}
+
+.person_description_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 200, 200, 0.7);
+}
+
+.person_description h2 {
+  position: absolute;
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.person_description p {
+  position: absolute;
+  color: black;
+  margin-left: 20px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+#front_page_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#front_page_hider {
+  background-color: white;
+}
+
+#logo_wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/moon_astronaut.jpg);
+  background-size: cover;
+}
+
+#logo {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url(../logo/logo_black.jpg);
+  background-size: 100% 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#site_language_wrapper {
+  text-align: center;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#site_language_wrapper a {
+  text-decoration: none;
+  color: white;
+  font-family: avenir;
+  font-size: 18px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+#scroll_down_link_p1 {
+  color: white;
+}
+
+#about_page_wrapper {
+  position: relative;
+  background-image: url(../images/moons.jpg);
+  background-size: cover;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#about_page_wrapper h1 {
+  color: white;
+  padding-top: 125px;
+  margin-top: 0;
+  margin-left: 35%;
+  text-align: left;
+}
+
+#about_description_english {
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  margin-left: 35%;
+  margin-top: 100px;
+  width: 400px;
+}
+
+#about_description_japanese {
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  margin-left: 35%;
+  margin-top: 100px;
+  width: 400px;
+  display: none;
+}
+
+#scroll_down_link_p2 {
+  color: black;
+}
+
+#about_page_hider {
+  background-color: black;
+}
+
+#who_page_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#who_page_hider {
+  background-color: white;
+}
+
+#who_page_wrapper h1 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin-top: 30px;
+  color: black;
+}
+
+#tomoya_profile {
+  background-image: url(../images/tomoya_profile.jpg);
+}
+
+#arun_profile {
+  background-image: url(../images/arun_profile.jpg);
+}
+
+#sujay_profile {
+  background-image: url(../images/sujay_profile.jpg);
+}
