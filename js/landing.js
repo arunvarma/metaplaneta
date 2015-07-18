@@ -50,6 +50,18 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.person_profile').hover(function() {
+    $(this).find('.person_description_wrapper').animate({
+      height: '240px'
+    }, 500);
+    $(this).find('.person_description_intro').fadeIn(400);
+  }, function() {
+    $(this).find('.person_description_wrapper').animate({
+      height: '80px'
+    }, 500);
+    $(this).find('.person_description_intro').fadeOut(400);
+  });
+
   // Fade each page according to scroll position.
   $(document).scroll(function() {
     var curScrollPos = $(document).scrollTop();
