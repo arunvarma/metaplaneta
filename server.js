@@ -7,68 +7,31 @@
 
 // PACKAGES.
 var express = require('express');
-var multer = require('multer');
 var bodyParser = require('body-parser');
-var moment = require('moment');
-var bcrypt = require('bcrypt');
-var session = require('express-session');
-var anyDB = require('any-db');
-var engines = require('consolidate');
-var config = require('./config');
-var sqlite_store = require('connect-sqlite3')(session);
 
 
 // CONFIGURATIONS.
 var app = express();
 
-app.use(multer({ dest: config.PATH_FILE }));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname));
 
-var conn = anyDB.createConnection(config.PATH_DATABASE);
-
+var engines = require('consolidate');
 app.engine('html', engines.hogan);
-app.set('views', __dirname + config.PATH_TEMPLATE);
+app.set('views', __dirname + '/templates');
 
-var session_store = new sqlite_store({ table: config.PATH_SESSION_DATABASE });
-app.use(session({
-  name: config.COOKIE_SESSION_NAME,
-  secret: config.COOKIE_SIGN_SECRET,
-  store: session_store,
-  saveUninitialized: false,
-  resave: false
-}));
-
-app.listen(config.NUM_PORT);
+app.listen(8080);
 
 
 // HTTP REQUESTS.
 // GET requests.
-// .
+// Landing page as home.
 app.get('/', function(request, response) {
-  ;
+  response.render('landing.html');
 });
 
-// Default: .
+// Default: redirect to landing page.
 app.get('*', function(request, response) {
-  ;
-})
-
-
-// POST requests.
-// Add user to database.
-app.post('/user/', function(request, response) {
-  ;
-});
-
-// Event creation.
-app.post('/event/', function(request, response) {
-  ;
-});
-
-// Default: .
-app.post('*', function(request, response) {
-  ;
+  response.redirect('/');
 });

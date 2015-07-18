@@ -5,8 +5,13 @@
  */
 
 @font-face {
-  font-family: "avenir";
+  font-family: 'avenirttf';
   src: url(../font/avenir.ttf);
+}
+
+@font-face {
+  font-family: 'avenirup';
+  src: url(../font/avenirup.ttf);
 }
 
 body, html {
@@ -17,26 +22,40 @@ body, html {
 }
 
 h1 {
-  font-family: avenir;
+  font-family: 'avenirup';
   font-weight: normal;
   font-size: 30px;
   text-align: center;
 }
 
 h2 {
-  font-family: avenir;
+  font-family: 'avenirttf';
   font-weight: normal;
   font-size: 18px;
 }
 
 p {
-  font-family: avenir;
+  font-family: 'avenirttf';
   font-weight: normal;
 }
 
 a {
-  font-family: avenir;
+  font-family: 'avenirttf';
   font-weight: normal;
+  text-decoration: none;
+}
+
+.text_chooser {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.japanese_text {
+  display: none;
 }
 
 .page_hider {
@@ -65,7 +84,6 @@ a {
   position: absolute;
   width: 100%;
   text-align: center;
-  text-decoration: none;
   font-size: 15px;
   margin-top: 10px;
 }
@@ -88,12 +106,12 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(200, 200, 200, 0.7);
+  background: rgba(120, 120, 120, 0.5);
 }
 
 .person_description_wrapper h2 {
   position: absolute;
-  color: black;
+  color: white;
   margin-left: 20px;
   margin-top: 10px;
   padding: 0;
@@ -101,7 +119,7 @@ a {
 
 .person_description_caption {
   position: absolute;
-  color: black;
+  color: white;
   margin-left: 20px;
   margin-top: 30px;
   padding: 0;
@@ -110,7 +128,7 @@ a {
 .person_description_intro {
   display: none;
   position: absolute;
-  color: black;
+  color: white;
   margin-left: 20px;
   margin-top: 80px;
 }
@@ -142,19 +160,17 @@ a {
   background-repeat: no-repeat;
 }
 
-#site_language_wrapper {
+#site_chooser_wrapper {
   text-align: center;
   padding: 0;
   margin-top: 20px;
 }
 
-#site_language_wrapper a {
-  text-decoration: none;
+#site_chooser_wrapper a {
   color: white;
-  font-family: avenir;
-  font-size: 18px;
-  margin-right: 30px;
-  margin-left: 30px;
+  font-size: 15px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 #scroll_down_link_p1 {
@@ -194,7 +210,6 @@ a {
   margin-left: 35%;
   margin-top: 100px;
   width: 400px;
-  display: none;
 }
 
 #scroll_down_link_p2 {

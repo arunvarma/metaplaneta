@@ -6,13 +6,8 @@
  */
 
 $(document).ready(function() {
-  // .
-  var frontPageHider = $('#front_page_hider');
-  var aboutPageHider = $('#about_page_hider');
-  var whoPageHider = $('#who_page_hider');
-
-  // .
-  frontPageHider.css('opacity', '0');
+  // Correct front page to not be faded.
+  $('#front_page_hider').css('opacity', '0');
 
   // On click of Front page scroll button, scroll down to About page.
   $('#scroll_down_link_p1').click(function() {
@@ -32,17 +27,8 @@ $(document).ready(function() {
     return false;
   });
 
-  // On English link click, display English site text.
-  $('#english_choose_link').click(function() {
-    // Hide Japanese text and show English text.
-    $('.japanese_text').css('display', 'none');
-    $('.english_text').css('display', 'block');
-
-    return false;
-  });
-
   // On Japanese link click, display Japanese site text.
-  $('#japanese_choose_link').click(function() {
+  $('#japanese_text_chooser').click(function() {
     // Hide English text and show Japanese text.
     $('.english_text').css('display', 'none');
     $('.japanese_text').css('display', 'block');
@@ -50,9 +36,19 @@ $(document).ready(function() {
     return false;
   });
 
+  // On English link click, display English site text.
+  $('#english_text_chooser').click(function() {
+    // Hide Japanese text and show English text.
+    $('.english_text').css('display', 'inline-block');
+    $('.japanese_text').css('display', 'none');
+
+    return false;
+  });
+
+  // When hovering over person's profile, display their intro.
   $('.person_profile').hover(function() {
     $(this).find('.person_description_wrapper').animate({
-      height: '240px'
+      height: '220px'
     }, 500);
     $(this).find('.person_description_intro').fadeIn(400);
   }, function() {
@@ -65,10 +61,10 @@ $(document).ready(function() {
   // Fade each page according to scroll position.
   $(document).scroll(function() {
     var curScrollPos = $(document).scrollTop();
-    pageFadeOnScroll(frontPageHider, curScrollPos);
-    pageFadeOnScroll(aboutPageHider, curScrollPos);
-    pageFadeOnScroll(whoPageHider, curScrollPos);
-  });
+    $('.page_hider').each(function(index, element) {
+      pageFadeOnScroll($(this), curScrollPos);
+    });
+  })
 });
 
 /*
@@ -80,7 +76,7 @@ function pageFadeOnScroll(pageHider, curScrollPos) {
   var pageBottom = pageTop + pageHeight;
   var windowBottom = curScrollPos + $(window).height();
 
-  // .
+  // Do nothing if the page is not visible.
   if (curScrollPos > pageBottom || windowBottom < pageTop) {
     return;
   }
