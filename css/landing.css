@@ -43,6 +43,7 @@ a {
   font-family: 'avenirttf';
   font-weight: normal;
   text-decoration: none;
+  display: inline-block;
 }
 
 .text_chooser {
@@ -83,9 +84,9 @@ a {
 .scroll_down_link {
   position: absolute;
   width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 15px;
-  margin-top: 10px;
 }
 
 .person_profile {

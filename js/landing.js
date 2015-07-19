@@ -5,6 +5,8 @@
  * Date: July 16, 2015
  */
 
+var english_text_is_on = true;
+
 $(document).ready(function() {
   // Correct front page to not be faded.
   $('#front_page_hider').css('opacity', '0');
@@ -32,25 +34,35 @@ $(document).ready(function() {
     // Hide English text and show Japanese text.
     $('.english_text').css('display', 'none');
     $('.japanese_text').css('display', 'block');
+    $('.person_description_intro.japanese_text').css('display', 'none');
 
+    english_text_is_on = false;
     return false;
   });
 
   // On English link click, display English site text.
   $('#english_text_chooser').click(function() {
     // Hide Japanese text and show English text.
-    $('.english_text').css('display', 'inline-block');
+    $('.english_text').css('display', 'block');
     $('.japanese_text').css('display', 'none');
+    $('.person_description_intro.english_text').css('display', 'none');
 
+    english_text_is_on = true;
     return false;
   });
 
   // When hovering over person's profile, display their intro.
   $('.person_profile').hover(function() {
     $(this).find('.person_description_wrapper').animate({
-      height: '220px'
+      height: '240px'
     }, 500);
-    $(this).find('.person_description_intro').fadeIn(400);
+
+    if (english_text_is_on) {
+      $(this).find('.person_description_intro.english_text').fadeIn(400);
+    }
+    else {
+      $(this).find('.person_description_intro.japanese_text').fadeIn(400);
+    }
   }, function() {
     $(this).find('.person_description_wrapper').animate({
       height: '80px'

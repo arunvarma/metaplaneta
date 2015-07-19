@@ -6,6 +6,7 @@ Date: July 3, 2015
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Metaplaneta | Home</title>
     <link rel='stylesheet' href='../css/landing.css' type='text/css'/>
     <script type='text/javascript' src='../js/jquery.js'></script>
@@ -16,20 +17,29 @@ Date: July 3, 2015
     <div id='front_page_wrapper'>
       <div id='front_page_hider' class='page_hider'></div>
 
-      <a href='#' id='japanese_text_chooser' class='text_chooser english_text'>sadf</a>
+      <a href='#' id='japanese_text_chooser' class='text_chooser english_text'>日本語にクリック</a>
       <a href='#' id='english_text_chooser' class='text_chooser japanese_text'>View site in English</a>
 
       <div id='logo_wrapper'>
         <div id='logo'></div>
 
         <div id='site_chooser_wrapper'>
-          <a id='japanese_site_link' href='http://www.metaplaneta-japan.com' class='english_text'>&#9700; Enter Japan site</a>
-          <a id='singapore_site_link' href='#' class='english_text'>Enter Singapore site &#9701;</a>
+          <a id='japanese_site_link' href='http://www.metaplaneta-japan.com'>
+            <p class='english_text'>&#9700; Enter Japan site</p>
+            <p class='japanese_text'>&#9700; 日本のウェブサイト</p>
+          </a>
+          <a id='singapore_site_link' href='http://metaplaneta-sg.com'>
+            <p class='english_text'>Enter Singapore site &#9701;</p>
+            <p class='japanese_text'>シンガポールのウェブサイト &#9701;</p>
+          </a>
         </div>
 
         <div id='scroll_down_wrapper_p1' class='scroll_down_wrapper'>
           <div id='scroll_down_box_p1' class='scroll_down_box'></div>
-          <a id='scroll_down_link_p1' class='scroll_down_link' href='#' onclick='return false;'>&#x25BC; Scroll</a>
+          <a id='scroll_down_link_p1' class='scroll_down_link' href='#' onclick='return false;'>
+            <p class='english_text'>&#x25BC; Scroll</p>
+            <p id='japanese_text'>&#x25BC; ダウン</p>
+          </a>
         </div>
       </div>
     </div>
@@ -37,43 +47,53 @@ Date: July 3, 2015
     <div id='about_page_wrapper'>
       <div id='about_page_hider' class='page_hider'></div>
 
-      <h1>The Mission</h1>
+      <h1 class='english_text'>The Mission</h1>
+      <h1 class='japanese_text'>私たちの旅</h1>
 
       <p id='about_description_english' class='english_text'>
         Metaplaneta are a creative think tank that investigates a multidisciplinary approach to space to make the space industry more academically diverse. We always have one question in mind: 'How can we perceive space exploration as not just a scientific endeavor, but as a tool to help us explore and expand mankind's potential?' Answering this question requires a multidisciplinary collaboration and an out-of-Earth thinking.<br><br>Our mission is to democratize space.
       </p>
 
       <p id='about_description_japanese' class='japanese_text'>
-        メタプラネタ（通称メタプラ）は、宇宙開発の学際的なアプローチを真髄に追求するクリエイティブ・シンク・タンクだ。
-
-        Metaはラテン語で“Beyond”、Planetaはギリシャ語で “Planet”を意味する。従ってMetaplanetaには “Beyond the Planet'（この惑星の先へ）”という意味が込められている。
-
-       『いかに宇宙を人類がいどむ未知の領域としてではなく、人類のさらなる可能性を探求できるツールとして捉えるか？』
-
-        この問いを軸に、メタプラは若い世代対象とした宇宙ニュースサイトの運営やワークショップの開催を行っている。
+        メタプラネタ（通称メタプラ）は、宇宙開発の学際的なアプローチを真髄に追求するクリエイティブ・シンク・タンクだ。 Metaはラテン語で“Beyond”、Planetaはギリシャ語で “Planet”を意味する。従ってMetaplanetaには “Beyond the Planet'（この惑星の先へ）”という意味が込められている。 『いかに宇宙を人類がいどむ未知の領域としてではなく、人類のさらなる可能性を探求できるツールとして捉えるか？』 この問いを軸に、メタプラは若い世代対象とした宇宙ニュースサイトの運営やワークショップの開催を行っている。
       </p>
 
       <div id='scroll_down_wrapper_p2' class='scroll_down_wrapper'>
         <div id='scroll_down_box_p2' class='scroll_down_box'></div>
-        <a id='scroll_down_link_p2' class='scroll_down_link' href='#' onclick='return false;'>&#x25BC; Keep going</a>
+        <a id='scroll_down_link_p2' class='scroll_down_link' href='#' onclick='return false;'>
+          <p class='english_text'>&#x25BC; Keep going</p>
+          <p class='japanese_text'>&#x25BC; ダウン</p>
+        </a>
       </div>
     </div>
 
     <div id='who_page_wrapper'>
-      <h1>The Space Cadets</h1>
+      <h1 class='english_text'>The Space Cadets</h1>
+      <h1 class='japanese_text'>宇宙飛行士</h1>
 
       <div id='tomoya_profile' class='person_profile'>
         <div id='tomoya_description_wrapper' class='person_description_wrapper'>
           <div id='tomoya_description_box' class='person_description_box'></div>
 
-          <h2>Tomoya Mori, Co-Founder</h2>
+          <h2 class='english_text'>Tomoya Mori | Co-Founder</h2>
+          <h2 class='japanese_text'>森　智也｜共同設立者</h2>
 
-          <p class='person_description_caption'>Brown University 2016<br>
+          <p class='person_description_caption english_text'>
+            Brown University 2016<br>
             Astronomy
           </p>
 
-          <p id='tomoya_description_intro' class='person_description_intro'>
-            Tomoya Mori currently serves as a director for Metaplaneta Japan. Although he has long been interested in space, he is also into filmmaking, architecture, science writing and language learning. For Tomoya, space exploration is an opportunity to challenge established concepts and explore new possibilities for mankind.
+          <p class='person_description_caption japanese_text'>
+            ブラウン大学（2016年卒）<br>
+            天文学
+          </p>
+
+          <p class='person_description_intro english_text'>
+            Tomoya Anthony Mori currently serves as a director for Metaplaneta Japan. Although he has long been interested in space, he is also into filmmaking, architecture, science writing and language learning. For Tomoya, space exploration is an opportunity to challenge established concepts and explore new possibilities for mankind.
+          </p>
+
+          <p class='person_description_intro japanese_text'>
+            森智也は現在メタプラネタ日本支部のディレクターを務めている。幼い頃から憧れていた宇宙の他に、彼はドキュメンタリー制作、サイエンス・ライティング、建築学と言語習得にも興味を持つ。彼にとって宇宙とは既存の概念を覆し、人類のさらなる可能性を追求する事ができる場だ。
           </p>
         </div>
       </div>
@@ -81,13 +101,26 @@ Date: July 3, 2015
       <div id='arun_profile' class='person_profile'>
         <div id='arun_description_wrapper' class='person_description_wrapper'>
           <div id='arun_description_box' class='person_description_box'></div>
-          <h2>Arun Alejandro Varma, ???</h2>
-          <p class='person_description_caption'>Brown University 2016<br>
+
+          <h2 class='english_text'>Arun Alejandro Varma | Partner & Developer</h2>
+          <h2 class='japanese_text'>アルン・アレハンドロ・ヴァーマ｜パートナー＆デベロッパー</h2>
+
+          <p class='person_description_caption english_text'>
+            Brown University 2016<br>
             Applied Mathematics/Computer Science
           </p>
 
-          <p id='arun_description_intro' class='person_description_intro'>
-            Arun Varma is the ___ for Metaplaneta. When he was in first grade, he was set on becoming a Backstreet Boy; his backup plan was an Astronaut. If you look hard enough, you can probably find him listening to music, making music, geeking out about the cosmos, or programming away.
+          <p class='person_description_caption japanese_text'>
+            ブラウン大学（2016年卒）<br>
+            応用数学 / コンピューターサイエンス
+          </p>
+
+          <p class='person_description_intro english_text'>
+            Arun Varma is a partner and programming developer for Metaplaneta. When he was in first grade, he was set on becoming a Backstreet Boy; his backup plan was to be an Astronaut. If you look hard enough, you can probably find him listening to music, making music, geeking out about the cosmos, or programming away.
+          </p>
+
+          <p class='person_description_intro japanese_text'>
+            アルンはメタプラネタのパートナーでありプログラマーでもある。小学校1年生の時、彼の夢はバックストリート・ボーイズの一員になることだったが、バックアッププランは宇宙飛行士だった。もしアルンを探したければ、きっと彼はどこかで音楽を聴いているか、音楽を作曲しているか、宇宙オタクモードに入っているか、プログラミングをしているだろう。
           </p>
         </div>
       </div>
@@ -96,14 +129,25 @@ Date: July 3, 2015
         <div id='sujay_description_wrapper' class='person_description_wrapper'>
           <div id='sujay_description_box' class='person_description_box'></div>
 
-          <h2>Sujay Natson, Co-Founder</h2>
+          <h2 class='english_text'>Sujay Natson | Co-Founder</h2>
+          <h2 class='japanese_text'>スジェイ・ナトソン｜共同設立者</h2>
 
-          <p class='person_description_caption'>Brown University 2016<br>
+          <p class='person_description_caption english_text'>
+            Brown University 2016<br>
             Political Science/Geology
           </p>
 
-          <p id='sujay_description_intro' class='person_description_intro'>
+          <p class='person_description_caption japanese_text'>
+            ブラウン大学（2016年卒）<br>
+            政治学/地質学
+          </p>
+
+          <p class='person_description_intro english_text'>
             Sujay Natson is the current director for Metaplaneta Singapore. When he's not working on Metaplaneta, you can usually find him avidly taking photos of everything from trees to people, running around looking for adventures, and enjoying yogurt.
+          </p>
+
+          <p class='person_description_intro japanese_text'>
+            スジェイは現在メタプラネタシンガポール支部のディレクターを務める。メタプラネタの仕事をしていない時、スジェイはきっと夢中に写真撮影をしているか、冒険を求めて走り回っているか、ヨーグルトを堪能しているだろう。
           </p>
         </div>
       </div>

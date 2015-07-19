@@ -1,0 +1,1 @@
+ssh -i metaplaneta_key.pem ec2-user@ec2-52-27-207-210.us-west-2.compute.amazonaws.com
