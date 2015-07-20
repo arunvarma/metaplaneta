@@ -35,6 +35,7 @@ $(document).ready(function() {
     $('.english_text').css('display', 'none');
     $('.japanese_text').css('display', 'block');
     $('.person_description_intro.japanese_text').css('display', 'none');
+    $('.japanese_text.enter_site').css('display', 'inline-block');
 
     english_text_is_on = false;
     return false;
@@ -46,6 +47,7 @@ $(document).ready(function() {
     $('.english_text').css('display', 'block');
     $('.japanese_text').css('display', 'none');
     $('.person_description_intro.english_text').css('display', 'none');
+    $('.english_text.enter_site').css('display', 'inline-block');
 
     english_text_is_on = true;
     return false;
