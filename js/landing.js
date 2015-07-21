@@ -67,7 +67,7 @@ $(document).ready(function() {
     }
   }, function() {
     $(this).find('.person_description_wrapper').animate({
-      height: '80px'
+      height: '100px'
     }, 500);
     $(this).find('.person_description_intro').fadeOut(400);
   });
