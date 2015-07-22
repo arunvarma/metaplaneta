@@ -142,6 +142,10 @@ a {
   margin-top: 80px;
 }
 
+.person_description_intro.japanese_text {
+  font-size: 14px;
+}
+
 #front_page_wrapper {
   position: relative;
   width: 100%;
@@ -217,7 +221,7 @@ a {
 }
 
 #about_description_japanese {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   text-align: left;
   margin-left: 35%;
