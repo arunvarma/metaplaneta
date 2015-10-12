@@ -8,22 +8,25 @@
 var english_text_is_on = true;
 
 $(document).ready(function() {
-  // Correct front page to not be faded.
-  $('#front_page_hider').css('opacity', '0');
+  var curScrollPos = $(document).scrollTop();
+  $('.page_hider').each(function(index, element) {
+    pageFadeOnScroll($(this), curScrollPos, false);
+  });
+
+  var player = $f($('#video_player')[0]);
+  var status = $('.status');
+  player.addEvent('ready', function() {
+    status.text('ready');
+
+    player.addEvent('pause', onPause);
+    player.addEvent('finish', onFinish);
+    player.addEvent('playProgress', onPlayProgress);
+  });
 
   // On click of Front page scroll button, scroll down to About page.
   $('#scroll_down_link_p1').click(function() {
     $('html, body').animate({
         scrollTop: $('#about_page_wrapper').offset().top
-    }, 800);
-
-    return false;
-  });
-
-  // On click of About page scroll button, scroll down to Who page.
-  $('#scroll_down_link_p2').click(function() {
-    $('html, body').animate({
-        scrollTop: $('#who_page_wrapper').offset().top
     }, 800);
 
     return false;
@@ -76,7 +79,11 @@ $(document).ready(function() {
   $(document).scroll(function() {
     var curScrollPos = $(document).scrollTop();
     $('.page_hider').each(function(index, element) {
-      pageFadeOnScroll($(this), curScrollPos);
+      pageFadeOnScroll($(this), curScrollPos, null);
+    });
+
+    $('#video_player').each(function(index, element) {
+      pageFadeOnScroll($(this), curScrollPos, player);
     });
   })
 });
@@ -84,7 +91,7 @@ $(document).ready(function() {
 /*
  * Fades given page hider based on current scrolling position.
  */
-function pageFadeOnScroll(pageHider, curScrollPos) {
+function pageFadeOnScroll(pageHider, curScrollPos, player) {
   var pageHeight = pageHider.height();
   var pageTop = pageHider.offset().top;
   var pageBottom = pageTop + pageHeight;
@@ -100,5 +107,17 @@ function pageFadeOnScroll(pageHider, curScrollPos) {
   var opacityVal = Math.min(posOffset / pageHeight, 1);
 
   // Alter opacity value according to position offset.
-  pageHider.css('opacity', opacityVal);
+  if (player) {
+    pageHider.css('opacity', 1 - opacityVal);
+
+    if (posOffset < 100) {
+      player.api('play');
+    }
+    else {
+      player.api('pause');
+    }
+  }
+  else {
+    pageHider.css('opacity', opacityVal);
+  }
 }

@@ -13,6 +13,7 @@ Date: July 3, 2015
     <link rel='stylesheet' href='../css/landing.css' type='text/css'/>
     <script type='text/javascript' src='../js/jquery.js'></script>
     <script type='text/javascript' src='../js/landing.js'></script>
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   </head>
 
   <body>
@@ -24,19 +25,6 @@ Date: July 3, 2015
 
       <div id='logo_wrapper'>
         <div id='logo'></div>
-
-        <div id='site_chooser_wrapper'>
-          <a href='http://www.metaplaneta-japan.com' class='site_link'>
-            <img src='../images/japan_flag.gif' class='flag_icon'>
-            <p class='english_text enter_site' style='display: inline-block'>Enter Japan site</p>
-            <p class='japanese_text enter_site'>メタプラネタ・ジャパン入り口</p>
-          </a>
-          <a href='http://metaplaneta-sg.com' class='site_link'>
-            <p class='english_text enter_site' style='display: inline-block'>Enter Singapore site</p>
-            <p class='japanese_text enter_site'>メタプラネタ・シンガポール入り口</p>
-            <img src='../images/singapore_flag.png' class='flag_icon'>
-          </a>
-        </div>
 
         <div id='scroll_down_wrapper_p1' class='scroll_down_wrapper'>
           <div id='scroll_down_box_p1' class='scroll_down_box'></div>
@@ -51,25 +39,28 @@ Date: July 3, 2015
     <div id='about_page_wrapper'>
       <div id='about_page_hider' class='page_hider'></div>
 
-      <h1 class='english_text'>The Mission</h1>
+      <h1 class='english_text'>About Us</h1>
       <h1 class='japanese_text'>ミッション</h1>
 
+      <hr>
+
       <p id='about_description_english' class='english_text'>
-        Metaplaneta is a creative think tank that investigates a multidisciplinary approach to space to make the space industry more academically diverse.<br><br>We always have one question in mind: 'How can we perceive space exploration as not just a scientific endeavor, but as a tool to help us explore and expand mankind's potential?'<br><br>Answering this question requires a multidisciplinary collaboration and an out-of-Earth thinking.<br><br>Our mission is to democratize space.
+        We are a creative think tank that investigates a<br>multidisciplinary approach to space to make the<br>space industry more academically diverse.<br><br>
+
+        For us, space is not just a destination, but a tool to<br>explore and expand mankind’s potential.<br><br>
+
+        We democratize space.
       </p>
 
       <p id='about_description_japanese' class='japanese_text'>
         メタプラネタ（通称メタプラ）は、宇宙開発の学際的なアプローチを真髄に追求するクリエイティブ・シンク・タンクだ。<br><br>Metaはラテン語で“Beyond”、Planetaはギリシャ語で “Planet”を意味する。従ってMetaplanetaには “Beyond the Planet'（この惑星の先へ）”という意味が込められている。<br><br>『いかに宇宙を人類のさらなる可能性を探求できるツールとして捉えるか？』<br><br>この問いを軸に、メタプラは若い世代対象とした宇宙ニュースサイトの運営やワークショップの開催を行っている。
       </p>
-
-      <div id='scroll_down_wrapper_p2' class='scroll_down_wrapper'>
-        <div id='scroll_down_box_p2' class='scroll_down_box'></div>
-        <a id='scroll_down_link_p2' class='scroll_down_link' href='#' onclick='return false;'>
-          <p class='english_text'>&#x25BC; Keep going</p>
-          <p class='japanese_text'>&#x25BC; スクロール</p>
-        </a>
-      </div>
     </div>
+
+   <div id='video_page_wrapper'>
+      <iframe id='video_player' src='https://player.vimeo.com/video/141295357?api=1' width='500' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen>
+      </iframe>
+   </div>
 
     <div id='who_page_wrapper'>
       <h1 class='english_text'>The Space Cadets</h1>
@@ -160,6 +151,83 @@ Date: July 3, 2015
       </div>
 
       <div id='who_page_hider' class='page_hider'></div>
+    </div>
+
+    <div id='activities_page_wrapper'>
+      <div id='activities_page_hider' class='page_hider'></div>
+
+      <div id='activities_page_header'>
+        <h1>Our Activities</h1>
+        <hr>
+        <p>To truly democratize space, we need to begin by<br>changing people’s perception of space.</p>
+      </div>
+
+      <h1>News Websites</h1>
+      <p>
+        Our news websites are regularly updated with news and<br>
+        information about non-conventional aspects of space.<br><br>
+
+        Posted articles includes video interviews of people who<br>
+        approach space exploration from unconventional<br>
+        perspectives.
+      </p>
+
+      <div id='site_chooser_wrapper'>
+        <a href='http://www.metaplaneta-japan.com' class='site_link' target='_blank'>
+          <img src='../images/japan_flag.gif' class='flag_icon'>
+          <p class='english_text enter_site' style='display: inline-block'>Enter Japan site</p>
+          <p class='japanese_text enter_site'>メタプラネタ・ジャパン入り口</p>
+        </a>
+        <a href='http://metaplaneta-sg.com' class='site_link' target='_blank'>
+          <img src='../images/singapore_flag.png' class='flag_icon'>
+          <p class='english_text' style='display: inline-block'>Enter Singapore site</p>
+          <p class='japanese_text'>メタプラネタ・シンガポール入り口</p>
+        </a>
+      </div>
+    </div>
+
+    <div id='workshops_page_wrapper'>
+      <div id='workshops_page_hider' class='page_hider'></div>
+
+      <h1>Design Workshops</h1>
+      <hr>
+
+      <p>
+        We organize interactive design workshops<br>
+        around the world.  Students and professionals from<br>
+        a variety of fields are invited to design missions<br>
+        through an interdisciplinary collaboration.
+      </p>
+
+      <div id='workshop_description_wrapper'>
+        <div id='singapore_workshop_wrapper' class='workshop_wrapper'>
+          <h2>SINGAPORE</h2>
+          <p>
+            In August 2015, Metaplaneta Singapore organized a “Lunar City Ideathon” at a local middle school in Singapore.
+          </p>
+        </div>
+
+        <div id='japan_workshop_wrapper' class='workshop_wrapper'>
+          <h2>JAPAN</h2>
+          <p>
+            On 29 August, Metaplaneta Japan organized its very first event in Tokyo. The event was called “Lunar City Design Hackathon”, focusing on the architectural aspect of lunar city design.
+          </p>
+          <iframe src="https://player.vimeo.com/video/139053707?api=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+          </iframe>
+        </div>
+
+        <div id='usa_workshop_wrapper' class='workshop_wrapper'>
+          <h2>USA</h2>
+          <p>Coming soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id='contact_page_wrapper'>
+      <h2>Contact Us</h2>
+      <a href='mailto:info@metaplaneta.org'>info@metaplaneta.org</a>
+      <p>\\</p>
+      <a href='https://www.facebook.com/Metaplaneta' target='_blank'>facebook.com/metaplaneta</a>
     </div>
   </body>
 </html>
