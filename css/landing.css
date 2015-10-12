@@ -85,7 +85,7 @@ hr {
   margin-top: 40px;
   margin-right: 40px;
   margin-left: 40px;
-  width: 150px;
+  width: 180px;
 }
 
 .site_link img {
@@ -231,30 +231,23 @@ hr {
   margin: 0;
   width: 100%;
   height: 100%;
-}
-
-#about_page_wrapper h1 {
-  color: white;
-  padding-top: 150px;
-  margin-top: 0;
-  text-align: center;
-  margin-bottom: 30px;
+  font-size: 22px;
 }
 
 #about_description_english {
-  font-size: 18px;
+  padding-top: 200px;
+  margin-top: 0;
   color: white;
   text-align: center;
-  margin-top: 50px;
 }
 
 #about_description_japanese {
-  font-size: 16px;
+  padding-top: 200px;
+  margin-top: 0;
   color: white;
-  text-align: left;
+  text-align: center;
   margin-left: 35%;
-  margin-top: 100px;
-  width: 400px;
+  width: 450px;
 }
 
 #scroll_down_link_p2 {
@@ -313,7 +306,7 @@ hr {
   text-align: center;
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #question_page_wrapper p {
@@ -323,7 +316,12 @@ hr {
   letter-spacing: 3px;
   color: white;
   margin: 0;
-  padding-top: 200px;
+  margin-bottom: 60px;
+}
+
+#question_page_wrapper .japanese_text {
+  font-size: 50px;
+  line-height: 180%;
 }
 
 #activities_page_wrapper {
@@ -389,8 +387,15 @@ hr {
 
 #workshops_page_wrapper p {
   text-align: center;
-  font-size: 18px;
   color: white;
+}
+
+#workshops_explanation_english {
+  font-size: 18px;
+}
+
+#workshops_explanation_japanese {
+  font-size: 15px;
 }
 
 #workshop_description_wrapper {
@@ -416,6 +421,10 @@ hr {
   margin: auto;
   margin-bottom: 30px;
   text-align: center;
+}
+
+#workshop_description_wrapper .japanese_text p {
+  font-size: 12px;
 }
 
 #workshop_description_wrapper iframe {
