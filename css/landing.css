@@ -380,7 +380,7 @@ hr {
 #workshops_page_wrapper h1 {
   font-size: 32px;
   color: white;
-  padding-top: 30px;
+  padding-top: 100px;
   margin: 0;
   text-align: center;
 }
@@ -388,6 +388,13 @@ hr {
 #workshops_page_wrapper p {
   text-align: center;
   color: white;
+}
+
+#workshops_page_wrapper a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #workshops_explanation_english {
