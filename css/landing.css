@@ -302,21 +302,22 @@ hr {
 }
 
 #question_page_wrapper {
-  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/blue_planet.jpg);
+  background-size: cover;
   text-align: center;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
 }
 
 #question_page_wrapper p {
+  position: relative;
+  top: 30%;
   font-size: 60px;
   font-family: 'sourcesanspro_extralight';
   line-height: 150%;
   letter-spacing: 3px;
   color: white;
   margin: 0;
-  margin-bottom: 60px;
 }
 
 #question_page_wrapper .japanese_text {
