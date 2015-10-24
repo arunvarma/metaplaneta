@@ -73,6 +73,7 @@ hr {
 
 .page_hider {
   position: absolute;
+  z-index: 10;
   background-color: black;
   width: 100%;
   height: 100%;
@@ -108,7 +109,7 @@ hr {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
 
 .scroll_down_box {
@@ -187,8 +188,18 @@ hr {
 }
 
 .workshop_wrapper {
+  position: relative;
   width: 500px;
   display: table-cell;
+}
+
+.workshops_explanation {
+  z-index: 5;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 100px;
 }
 
 #front_page_wrapper {
@@ -202,6 +213,7 @@ hr {
   height: 100%;
   padding-top: 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/landing.jpg);
+  background-position: center;
   background-size: cover;
   box-sizing: border-box;
   ms-box-sizing: border-box;
@@ -215,6 +227,7 @@ hr {
   margin: 0 auto;
   margin-top: 140px;
   background-image: url(../images/logo_transparent.png);
+  background-position: center;
   background-size: 100% 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -227,6 +240,7 @@ hr {
 #about_page_wrapper {
   position: relative;
   background-image: url(../images/moons.jpg);
+  background-position: center;
   background-size: cover;
   margin: 0;
   width: 100%;
@@ -291,18 +305,24 @@ hr {
 
 #tomoya_profile {
   background-image: url(../images/tomoya_profile.jpg);
+  background-position: center;
 }
 
 #arun_profile {
   background-image: url(../images/arun_profile.jpg);
+  background-position: center;
 }
 
 #sujay_profile {
   background-image: url(../images/sujay_profile.jpg);
+  background-position: center;
 }
 
 #question_page_wrapper {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/blue_planet.jpg);
+  -webkit-transform: translate3d(0, 0, 0);
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   text-align: center;
   width: 100%;
@@ -328,6 +348,7 @@ hr {
 #activities_page_wrapper {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/wiktor.jpg);
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -335,6 +356,7 @@ hr {
 }
 
 #activities_page_wrapper h1 {
+  position: relative;
   font-size: 32px;
   margin-left: auto;
   margin-right: auto;
@@ -352,12 +374,12 @@ hr {
   margin-right: auto;
   text-align: center;
   color: white;
+  margin-bottom: 100px;
 }
 
 #activities_page_header {
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 #site_chooser_wrapper {
@@ -372,18 +394,22 @@ hr {
 
 #workshops_page_wrapper {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/workshop.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #workshops_page_wrapper h1 {
+  position: absolute;
+  z-index: 5;
   font-size: 32px;
   color: white;
-  padding-top: 100px;
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
+  top: 50px;
 }
 
 #workshops_page_wrapper p {
@@ -398,15 +424,9 @@ hr {
   font-weight: bold;
 }
 
-#workshops_explanation_english {
-  font-size: 18px;
-}
-
-#workshops_explanation_japanese {
-  font-size: 15px;
-}
-
 #workshop_description_wrapper {
+  width: 100%;
+  height: 100%;
   margin: auto;
   left: 0;
   right: 0;
@@ -414,33 +434,54 @@ hr {
   display: table;
 }
 
+#workshop_description_wrapper h1 {
+  position: relative;
+}
+
 #workshop_description_wrapper h2 {
   text-align: center;
   font-size: 30px;
   color: white;
   margin-bottom: 10px;
+  margin-top: 400px;
 }
 
 #workshop_description_wrapper p {
   font-size: 15px;
-  width: 380px;
+  width: 340px;
   left: 0;
   right: 0;
   margin: auto;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: justify;
 }
 
 #workshop_description_wrapper .japanese_text p {
   font-size: 12px;
 }
 
-#workshop_description_wrapper iframe {
-  width: 400px;
-  height: 230px;
+#singapore_workshop_wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/singapore_event.jpg);
+  background-position: left;
+  background-size: cover;
+}
+
+#japan_workshop_wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/japan_event.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#usa_workshop_wrapper {
+  background-color: black;
+}
+
+#usa_workshop_wrapper p {
+  text-align: center;
 }
 
 #contact_page_wrapper {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.9);
   padding-bottom: 20px;
   text-align: center;
